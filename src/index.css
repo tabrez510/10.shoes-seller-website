@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.no-wrap-table td {
+  white-space: nowrap;
+}
+
+form label{
+  font-weight: bold;
+}

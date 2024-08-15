@@ -18,3 +18,14 @@ code {
 form label{
   font-weight: bold;
 }
+
+.custom-modal .modal-dialog {
+  max-width: 80%; /* Increase modal width */
+  max-height: 90vh; /* Increase modal height */
+  margin: auto;
+}
+
+.custom-modal .modal-content {
+  height: 100%;
+  overflow-y: auto; /* Scrollable content if necessary */
+}

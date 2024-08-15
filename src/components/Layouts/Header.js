@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   Navbar,
   Container,
@@ -7,8 +7,11 @@ import {
   Button,
   Badge,
 } from "react-bootstrap";
+import CartContext from "../../store/cart-context";
 
 const Header = (props) => {
+  const cartCtx = useContext(CartContext);
+  
   return (
     <Navbar
       expand="sm"
@@ -28,7 +31,7 @@ const Header = (props) => {
             <Nav className="mx-auto">
               <Nav.Link>
                 <Button variant="primary" onClick={props.onShow}>
-                  Cart <Badge bg="dark">0</Badge>
+                  Cart <Badge bg="dark">{cartCtx.items.length}</Badge>
                 </Button>
               </Nav.Link>
             </Nav>
